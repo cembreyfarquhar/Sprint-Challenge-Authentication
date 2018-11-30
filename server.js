@@ -1,5 +1,20 @@
+/*
+Implement the `register` and `login` functions 
+inside `/config/routes.js`. Use JSON Web Tokens 
+for authentication.
+
+The migrations and a database with empty users is 
+already included, your job is adding the 
+authentication related code. If every is done 
+correctly, visiting `/api/jokes` should return 
+a list of jokes.
+
+*/
+
 const express = require('express');
 const cors = require('cors');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 const configureRoutes = require('./config/routes');
 
